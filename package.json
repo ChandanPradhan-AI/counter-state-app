@@ -3,13 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "rimraf .next && next dev --turbopack",
     "build": "next lint && next build",
-    "prestart": "next lint && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prod": "rimraf .next && next lint && next build && next start"
   },
   "dependencies": {
+    "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "0.7.1",
     "clsx": "2.1.1",
     "lucide-react": "0.476.0",
@@ -17,6 +18,7 @@
     "next-themes": "0.4.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
+    "rimraf": "^6.0.1",
     "tailwind-merge": "3.0.2",
     "tailwindcss-animate": "1.0.7"
   },
@@ -36,6 +38,5 @@
   },
   "author": "chandan pradhan",
   "license": "MIT",
-
   "homepage": "https://github.com/ChandanPradhan-AI/counter-state-app"
 }

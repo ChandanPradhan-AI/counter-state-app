@@ -1,16 +1,24 @@
+import BasicAppComp from "@/components/BasicAppComp";
+import { Card, CardHeader } from "@/components/shadcnui/card";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Nextjs Starter Template",
-  description: "Hpme page of Nextjs Starter Template",
+  title: "Basic | Counter App",
+  description: "Basic Counter App",
 };
 
 const page = () => {
   return (
     <>
-      <div className="grid h-[90dvh] place-items-center">
-        <div className="">Nextjs Starter Template</div>
-      </div>
+      <section className="grid h-[85dvh] place-items-center">
+        <Card className="w-xs p-4">
+          <CardHeader className="text-center text-lg font-semibold lg:text-xl">
+            Basic Counter App
+          </CardHeader>
+          <BasicAppComp />
+        </Card>
+      </section>
     </>
   );
 };
